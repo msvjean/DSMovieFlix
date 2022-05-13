@@ -1,0 +1,20 @@
+.nav-container {
+  background-color: #ffc700;
+  display: flex;
+  justify-content: space-between;
+  height: 68px;
+  align-items: center;
+}
+
+.nav-container h3 {
+  margin-left: 25px;
+  font-size: 24px;
+}
+
+.logout-icon {
+  border: 1px solid #000000;
+  border-radius: 10px;
+  margin-right: 20px;
+  width: 95px;
+  text-align: center;
+}

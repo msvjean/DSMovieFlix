@@ -1,0 +1,38 @@
+.home-container {
+    display: flex;
+    padding: 40px;
+    justify-content: space-around;
+}
+
+.home-content-container{
+    margin-top: 40px;
+    display: none;
+}
+
+.home-content-container h1{
+    color: #FFF;
+    margin-bottom: 19px;
+    margin-left: 50px;
+}
+
+.home-content-container p{
+    color: #FFF;
+    font-size: 22px;
+    margin-bottom: 40px;
+    margin-left: 50px;
+    width: 350px;
+}
+
+.home-content-container svg{
+    width: 380px;
+}
+
+@media(min-width: 1200px){
+    .home-container {
+        padding: 15px;
+    }
+
+    .home-content-container{
+        display: unset;
+    }
+}
