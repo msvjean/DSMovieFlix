@@ -1,0 +1,32 @@
+.name-user-review {
+    display: flex;
+    align-items: center;
+  }
+  
+  .name-user-review img {
+    width: 15px;
+    margin-left: 30px;
+  }
+  
+  .lbl-username {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 700;
+    margin-left: 15px;
+  }
+  
+  .review-text {
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin: 5px 15px;
+  }
+  
+  .review-text p {
+    margin: 0;
+    letter-spacing: -0.015em;
+    color: #9e9e9e;
+    margin-left: 16px;
+  }
