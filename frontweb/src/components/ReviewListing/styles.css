@@ -1,3 +1,7 @@
+.list-item-container{
+  margin-top: 15px;
+}
+
 .name-user-review {
     display: flex;
     align-items: center;
