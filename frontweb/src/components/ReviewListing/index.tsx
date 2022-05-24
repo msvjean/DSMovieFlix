@@ -7,10 +7,10 @@ type Props = {
   reviews: Review[];
 };
 
-const ReviewListing = (reviews: Props) => {
+const ReviewListing = ({reviews}: Props) => {
   return (
     <>
-      {reviews.reviews.map((item) => (
+      {reviews.map((item) => (
         <div className="list-item-container" key={item.id}>
           <div className="name-user-review">
             <img src={StarIcon} alt="" />
