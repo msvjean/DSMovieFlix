@@ -1,4 +1,14 @@
-.listing-movie-container{
-    color: #FFF;
-    padding: 40px;
+.listing-movie-container {
+  padding: 10px;
+  color: #fff;
+}
+
+.movie-item-container {
+  padding: 20px;
+}
+
+@media (min-width: 576px) {
+  .listing-movie-container {
+    padding: 21px;
+  }
 }
