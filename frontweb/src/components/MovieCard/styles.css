@@ -22,3 +22,7 @@
 .movie-name-description-container p {
     margin-bottom: 40px;
 }
+
+.movie-synopsis-container{
+    border: 1px solid #E1E1E1;
+}

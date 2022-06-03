@@ -3,6 +3,7 @@ import ButtonIcon from 'components/ButtonIcon';
 import { useForm } from 'react-hook-form';
 import { Review } from 'types/review';
 import { requestBackend } from 'util/requests';
+import { toast } from 'react-toastify';
 
 import './styles.css';
 
@@ -22,9 +23,17 @@ const ReviewForm = ({ movieId, onInsertReview }: Props) => {
     handleSubmit,
     formState: { errors },
     setValue,
+    getValues,
   } = useForm<FormData>();
 
   const onSubmit = (formData: FormData) => {
+    const formReviewText = getValues('text');
+
+    if(formReviewText === ""){
+      toast.error("Não é permitido salvar avaliação vazia.");
+      return;
+    }
+
     formData.movieId = parseInt(movieId);
 
     const params: AxiosRequestConfig = {
@@ -38,9 +47,9 @@ const ReviewForm = ({ movieId, onInsertReview }: Props) => {
 
     requestBackend(params)
       .then((response) => {
+        toast.info("Avaliação salva com sucesso.");
         setValue('text', '');
         onInsertReview(response.data);
-        console.log('Sucesso ao salvar', response);
       })
       .catch((error) => {
         console.log('Erro ao salvar', error);
@@ -52,9 +61,7 @@ const ReviewForm = ({ movieId, onInsertReview }: Props) => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <input
-            {...register('text', {
-              required: 'Campo obrigatório',
-            })}
+            {...register('text')}
             type="text"
             className={`form-control base-input review-input ${
               errors.text ? 'is-invalid' : ''

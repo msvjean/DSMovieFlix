@@ -7,7 +7,6 @@ type Props = {
 };
 
 const MovieCard = ({ movie }: Props) => {
-
   return (
     <div className="base-card movie-card-container">
       <div className="movie-img-container">
