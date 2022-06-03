@@ -7,6 +7,7 @@ type Props = {
 };
 
 const MovieCard = ({ movie }: Props) => {
+
   return (
     <div className="base-card movie-card-container">
       <div className="movie-img-container">
@@ -15,7 +16,7 @@ const MovieCard = ({ movie }: Props) => {
       <div className="movie-name-description-container">
         <h3>{movie.title}</h3>
         <h6 className="text-primary">{movie.year}</h6>
-        <p>{movie.subTitle}</p>
+        <p>{movie.subTitle ? movie.subTitle : 'Subtitulo'}</p>
       </div>
     </div>
   );
